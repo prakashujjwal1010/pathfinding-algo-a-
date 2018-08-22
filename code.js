@@ -1,3 +1,4 @@
+//canvas
 var canvas=document.getElementById('myCanvas');
 var w=window.innerWidth;
 var h=window.innerHeight;
@@ -12,7 +13,7 @@ var rows=80;
 var wn=(w-100)/cols;
 var hn=(h-100)/rows;
 var grid=[];
-
+//node constructor function
 function Node(i,j){
     this.i=i;
     this.j=j;
@@ -37,6 +38,7 @@ function Node(i,j){
         }
     }
 }
+//initializing 2d array with nodes
 for(var i=0;i<rows;i++){
     grid[i]=[];
     for(var j=0;j<cols;j++){
@@ -67,6 +69,7 @@ var start=grid[0][0];
 var end=grid[rows-1][cols-1];
 end.walls=false;
 start.walls=false;
+
 function heuristic(x,y){
     return (Math.abs(x.i*wn-y.i*wn)+Math.abs(x.j*wn-y.j*wn));
 }
@@ -131,6 +134,7 @@ for(var i=0;i<rows;i++){
 }
 end.color("yellow");
  var next=end.parent;
+//for animation
 function animate(){
     requestAnimationFrame(animate);
     if(next!=null){
