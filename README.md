@@ -1,2 +1,2 @@
 # pathfinding-algo-a-
-//this program ia an illustration for a* algorithm
+//this program is an illustration for a* algorithm
